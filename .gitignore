@@ -7,3 +7,10 @@ demo/.idea/libraries/Maven__org_openjfx_javafx_media_mac_11_0_2.xml
 demo/.idea/libraries/Maven__org_openjfx_javafx_web_mac_11_0_2.xml
 demo/.idea/vcs.xml
 demo/demo.iml
+demo/demo.iml
+demo/.idea/libraries/Maven__org_openjfx_javafx_web_win_11_0_2.xml
+demo/.idea/libraries/Maven__org_openjfx_javafx_media_win_11_0_2.xml
+demo/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_11_0_2.xml
+demo/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_11_0_2.xml
+demo/.idea/libraries/Maven__org_openjfx_javafx_controls_win_11_0_2.xml
+demo/.idea/libraries/Maven__org_openjfx_javafx_base_win_11_0_2.xml
