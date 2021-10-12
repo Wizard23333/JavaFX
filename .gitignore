@@ -15,3 +15,5 @@ demo/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_11_0_2.xml
 demo/.idea/libraries/Maven__org_openjfx_javafx_controls_win_11_0_2.xml
 demo/.idea/libraries/Maven__org_openjfx_javafx_base_win_11_0_2.xml
 *.class
+/demo/target
+/demo/.idea
