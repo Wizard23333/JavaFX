@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.demo.MainWindowController">
+    <children>
+        <VBox layoutX="14.0" layoutY="34.0" prefHeight="341.0" prefWidth="63.0" AnchorPane.bottomAnchor="25.0"
+              AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0">
+            <children>
+                <Button mnemonicParsing="false" prefHeight="176.0" prefWidth="63.0" text="Button" onAction="#onPreButtonClick">
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                    <font>
+                        <Font name="SansSerif Regular" size="13.0"/>
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" prefHeight="185.0" prefWidth="63.0" text="Button" onAction="#onNextButtonClick">
+                    <font>
+                        <Font name="SansSerif Regular" size="13.0"/>
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+
+        <Pane layoutX="121.0" layoutY="49.0" prefHeight="302.0" prefWidth="390.0"/>
+    </children>
+</AnchorPane>
