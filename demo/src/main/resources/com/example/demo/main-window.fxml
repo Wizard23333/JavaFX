@@ -1,35 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import javafx.geometry.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.demo.MainWindowController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.MainWindowController">
     <children>
-        <VBox layoutX="14.0" layoutY="34.0" prefHeight="341.0" prefWidth="63.0" AnchorPane.bottomAnchor="25.0"
-              AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0">
+        <VBox layoutX="14.0" layoutY="34.0" prefHeight="341.0" prefWidth="63.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0">
             <children>
-                <Button mnemonicParsing="false" prefHeight="176.0" prefWidth="63.0" text="Button" onAction="#onPreButtonClick">
+                <Button mnemonicParsing="false" onAction="#onPreButtonClick" prefHeight="176.0" prefWidth="63.0" text="Button">
                     <VBox.margin>
-                        <Insets/>
+                        <Insets />
                     </VBox.margin>
                     <font>
-                        <Font name="SansSerif Regular" size="13.0"/>
+                        <Font name="SansSerif Regular" size="13.0" />
                     </font>
                 </Button>
-                <Button mnemonicParsing="false" prefHeight="185.0" prefWidth="63.0" text="Button" onAction="#onNextButtonClick">
+                <Button mnemonicParsing="false" onAction="#onNextButtonClick" prefHeight="185.0" prefWidth="63.0" text="Button">
                     <font>
-                        <Font name="SansSerif Regular" size="13.0"/>
+                        <Font name="SansSerif Regular" size="13.0" />
                     </font>
                 </Button>
             </children>
         </VBox>
-
-        <Pane layoutX="121.0" layoutY="49.0" prefHeight="302.0" prefWidth="390.0"/>
+      <MenuButton layoutX="105.0" layoutY="25.0" mnemonicParsing="false" text="DemoList">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#onPreButtonClick" text="demo1" />
+          <MenuItem mnemonicParsing="false" onAction="#onNextButtonClick" text="demo2" />
+        </items>
+      </MenuButton>
     </children>
 </AnchorPane>
