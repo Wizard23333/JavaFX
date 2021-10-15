@@ -2,6 +2,7 @@ package com.example.demo;
 
 import com.example.demo.demo1.Demo1Application;
 import com.example.demo.demo2.Demo2Application;
+import com.example.demo.demo3.Demo3Application;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
@@ -22,6 +23,11 @@ public class MainWindowController {
         }
         try {
             add(new Demo2Application());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            add(new Demo3Application());
         } catch (IOException e) {
             e.printStackTrace();
         }

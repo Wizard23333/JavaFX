@@ -15,9 +15,9 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.MainWindowController">
     <children>
-        <VBox layoutX="14.0" layoutY="34.0" prefHeight="341.0" prefWidth="63.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0">
+        <VBox layoutX="429.0" layoutY="69.0" prefHeight="89.0" prefWidth="141.0" AnchorPane.bottomAnchor="242.0" AnchorPane.leftAnchor="429.0" AnchorPane.topAnchor="69.0">
             <children>
-                <Button mnemonicParsing="false" onAction="#onPreButtonClick" prefHeight="176.0" prefWidth="63.0" text="Button">
+                <Button mnemonicParsing="false" onAction="#onPreButtonClick" prefHeight="45.0" prefWidth="153.0" text="PreDemo">
                     <VBox.margin>
                         <Insets />
                     </VBox.margin>
@@ -25,7 +25,7 @@
                         <Font name="SansSerif Regular" size="13.0" />
                     </font>
                 </Button>
-                <Button mnemonicParsing="false" onAction="#onNextButtonClick" prefHeight="185.0" prefWidth="63.0" text="Button">
+                <Button mnemonicParsing="false" onAction="#onNextButtonClick" prefHeight="43.0" prefWidth="154.0" text="NextDemo">
                     <font>
                         <Font name="SansSerif Regular" size="13.0" />
                     </font>
