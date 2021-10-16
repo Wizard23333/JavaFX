@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.demo10.Demo10Controller">
+    <children>
+        <Label fx:id="text" layoutX="14.0" layoutY="92.0" prefHeight="49.0" prefWidth="200.0" text="Text">
+            <font>
+                <Font name="SansSerif Regular" size="43.0" />
+            </font>
+        </Label>
+        <TextField fx:id="textField" layoutX="14.0" layoutY="188.0" prefHeight="79.0" prefWidth="200.0">
+            <font>
+                <Font name="Serif Regular" size="43.0" />
+            </font>
+        </TextField>
+        <Slider fx:id="widthSlider" layoutX="333.0" layoutY="51.0" majorTickUnit="1.0" max="10.0" min="1.0" onDragDetected="#onDragDetected" prefHeight="82.0" prefWidth="267.0" showTickLabels="true" />
+        <Label layoutX="226.0" layoutY="69.0" text="width">
+            <font>
+                <Font name="Serif Regular" size="34.0" />
+            </font>
+        </Label>
+        <Label layoutX="223.0" layoutY="168.0" text="height">
+            <font>
+                <Font name="SansSerif Regular" size="34.0" />
+            </font>
+        </Label>
+        <Slider fx:id="heightSlider" layoutX="334.0" layoutY="142.0" majorTickUnit="1.0" max="10.0" min="1.0" onDragDetected="#onDragDetected" prefHeight="82.0" prefWidth="267.0" showTickLabels="true" />
+        <Label layoutX="233.0" layoutY="245.0" text="area">
+            <font>
+                <Font name="SansSerif Regular" size="34.0" />
+            </font>
+        </Label>
+        <TextField fx:id="areaTextField" editable="false" layoutX="355.0" layoutY="236.0" prefHeight="64.0" prefWidth="228.0">
+            <font>
+                <Font name="SansSerif Regular" size="37.0" />
+            </font>
+        </TextField>
+    </children>
+</AnchorPane>

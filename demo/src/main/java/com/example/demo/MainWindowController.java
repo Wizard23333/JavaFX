@@ -1,6 +1,9 @@
 package com.example.demo;
 
 import com.example.demo.demo1.Demo1Application;
+import com.example.demo.demo10.Demo10Application;
+import com.example.demo.demo11.Demo11Application;
+import com.example.demo.demo12.Demo12Application;
 import com.example.demo.demo2.Demo2Application;
 import com.example.demo.demo3.Demo3Application;
 import javafx.fxml.FXML;
@@ -28,6 +31,21 @@ public class MainWindowController {
         }
         try {
             add(new Demo3Application());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            add(new Demo10Application());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            add(new Demo11Application());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            add(new Demo12Application());
         } catch (IOException e) {
             e.printStackTrace();
         }
