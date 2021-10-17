@@ -16,7 +16,7 @@ public class MainWindowApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainWindowApplication.class.getResource("main-window.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 960, 620);
+        Scene scene = new Scene(fxmlLoader.load());
         primaryStage.setTitle("演示控制台");
         primaryStage.setScene(scene);
 
@@ -28,6 +28,8 @@ public class MainWindowApplication extends Application {
 //                Platform.exit();
 //            }
 //        });
+        primaryStage.setX(250);
+        primaryStage.setY(300);
         primaryStage.show();
     }
 }

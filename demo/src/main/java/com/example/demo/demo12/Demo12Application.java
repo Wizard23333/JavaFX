@@ -44,7 +44,7 @@ public class Demo12Application extends Stage {
         vBox.getChildren().addAll(button2);
 
 
-        Scene scene = new Scene(vBox, 800, 600);
+        Scene scene = new Scene(vBox, 400, 300);
 
         this.setScene(scene);
         this.setTitle("Demo12");
