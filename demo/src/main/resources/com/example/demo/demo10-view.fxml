@@ -19,7 +19,7 @@
                 <Font name="Serif Regular" size="43.0" />
             </font>
         </TextField>
-        <Slider fx:id="widthSlider" layoutX="333.0" layoutY="51.0" majorTickUnit="1.0" max="10.0" min="1.0" onDragDetected="#onDragDetected" prefHeight="82.0" prefWidth="267.0" showTickLabels="true" />
+        <Slider fx:id="widthSlider" layoutX="333.0" layoutY="51.0" majorTickUnit="1.0" max="10.0" min="1.0" onMouseDragged="#onDragDetected" prefHeight="82.0" prefWidth="267.0" showTickLabels="true" />
         <Label layoutX="226.0" layoutY="69.0" text="width">
             <font>
                 <Font name="Serif Regular" size="34.0" />
@@ -30,7 +30,7 @@
                 <Font name="SansSerif Regular" size="34.0" />
             </font>
         </Label>
-        <Slider fx:id="heightSlider" layoutX="334.0" layoutY="142.0" majorTickUnit="1.0" max="10.0" min="1.0" onDragDetected="#onDragDetected" prefHeight="82.0" prefWidth="267.0" showTickLabels="true" />
+        <Slider fx:id="heightSlider" layoutX="334.0" layoutY="142.0" majorTickUnit="1.0" max="10.0" min="1.0" onMouseDragged="#onDragDetected" prefHeight="82.0" prefWidth="267.0" showTickLabels="true" />
         <Label layoutX="233.0" layoutY="245.0" text="area">
             <font>
                 <Font name="SansSerif Regular" size="34.0" />

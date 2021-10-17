@@ -15,9 +15,9 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.MainWindowController">
     <children>
-        <VBox layoutX="429.0" layoutY="69.0" prefHeight="89.0" prefWidth="141.0" AnchorPane.bottomAnchor="242.0" AnchorPane.leftAnchor="429.0" AnchorPane.topAnchor="69.0">
+        <VBox layoutX="14.0" layoutY="34.0" prefHeight="341.0" prefWidth="63.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0">
             <children>
-                <Button mnemonicParsing="false" onAction="#onPreButtonClick" prefHeight="45.0" prefWidth="153.0" text="PreDemo">
+                <Button mnemonicParsing="false" onAction="#onPreButtonClick" prefHeight="22.0" prefWidth="63.0" text="Pre">
                     <VBox.margin>
                         <Insets />
                     </VBox.margin>
@@ -25,18 +25,26 @@
                         <Font name="SansSerif Regular" size="13.0" />
                     </font>
                 </Button>
-                <Button mnemonicParsing="false" onAction="#onNextButtonClick" prefHeight="43.0" prefWidth="154.0" text="NextDemo">
+                <Button mnemonicParsing="false" onAction="#onNextButtonClick" prefHeight="23.0" prefWidth="63.0" text="Next">
                     <font>
                         <Font name="SansSerif Regular" size="13.0" />
                     </font>
                 </Button>
             </children>
         </VBox>
-      <MenuButton layoutX="105.0" layoutY="25.0" mnemonicParsing="false" text="DemoList">
-        <items>
-          <MenuItem mnemonicParsing="false" onAction="#onPreButtonClick" text="demo1" />
-          <MenuItem mnemonicParsing="false" onAction="#onNextButtonClick" text="demo2" />
-        </items>
-      </MenuButton>
+        <MenuButton layoutX="106.0" layoutY="25.0" mnemonicParsing="false" text="DemoList">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#onMenuClick0" text="demo1" />
+                <MenuItem mnemonicParsing="false" onAction="#onMenuClick1" text="demo2" />
+                <MenuItem mnemonicParsing="false" onAction="#onMenuClick2" text="LayoutDemo1" />
+                <MenuItem mnemonicParsing="false" onAction="#onMenuClick3" text="LayoutDemo2" />
+                <MenuItem mnemonicParsing="false" onAction="#onMenuClick4" text="LayoutDemo3" />
+                <MenuItem mnemonicParsing="false" onAction="#onMenuClick5" text="EventFilterDemo" />
+                <MenuItem mnemonicParsing="false" onAction="#onMenuClick6" text="DragAndDropDemo1" />
+            <MenuItem mnemonicParsing="false" onAction="#onMenuClick7" text="Demo10" />
+            <MenuItem mnemonicParsing="false" onAction="#onMenuClick8" text="Demo11" />
+            <MenuItem mnemonicParsing="false" onAction="#onMenuClick9" text="Demo12" />
+            </items>
+        </MenuButton>
     </children>
 </AnchorPane>

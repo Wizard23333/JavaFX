@@ -1,11 +1,16 @@
 package com.example.demo;
 
+import com.example.demo.LayoutDemo1.LayoutSampleApplication;
+import com.example.demo.LayoutDemo2.LayoutSizingAligning;
+import com.example.demo.LayoutDemo3.LayoutSampleCSS;
 import com.example.demo.demo1.Demo1Application;
 import com.example.demo.demo10.Demo10Application;
 import com.example.demo.demo11.Demo11Application;
 import com.example.demo.demo12.Demo12Application;
 import com.example.demo.demo2.Demo2Application;
 import com.example.demo.demo3.Demo3Application;
+import com.example.demo.dragAndDropDemo1.HelloDragAndDrop;
+import com.example.demo.eventFilterDemo.DraggablePanelsExample;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
@@ -30,8 +35,28 @@ public class MainWindowController {
             e.printStackTrace();
         }
         try {
-            add(new Demo3Application());
-        } catch (IOException e) {
+            add(new LayoutSampleApplication());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            add(new LayoutSizingAligning());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            add(new LayoutSampleCSS());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            add(new DraggablePanelsExample());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            add(new HelloDragAndDrop());
+        } catch (Exception e) {
             e.printStackTrace();
         }
         try {
@@ -72,4 +97,73 @@ public class MainWindowController {
         demoNum = demoNum < 0 ? demoNum + demoList.size() : demoNum;
     }
 
+    @FXML
+    private void onMenuClick0(){
+        demoNum = 0;
+        Stage demo = this.demoList.get(demoNum);
+        demo.show();
+    }
+
+    @FXML
+    private void onMenuClick1(){
+        demoNum = 1;
+        Stage demo = this.demoList.get(demoNum);
+        demo.show();
+    }
+
+    @FXML
+    private void onMenuClick2() throws Exception {
+        demoNum = 2;
+        Stage demo = this.demoList.get(demoNum);
+        demo.show();
+    }
+
+    @FXML
+    private void onMenuClick3() throws Exception {
+        demoNum = 3;
+        Stage demo = this.demoList.get(demoNum);
+        demo.show();
+    }
+
+    @FXML
+    private void onMenuClick4() throws Exception {
+        demoNum = 4;
+        Stage demo = this.demoList.get(demoNum);
+        demo.show();
+    }
+
+    @FXML
+    private void onMenuClick5() throws Exception {
+        demoNum = 5;
+        Stage demo = this.demoList.get(demoNum);
+        demo.show();
+    }
+
+    @FXML
+    private void onMenuClick6() throws Exception {
+        demoNum = 6;
+        Stage demo = this.demoList.get(demoNum);
+        demo.show();
+    }
+
+    @FXML
+    private void onMenuClick7() throws Exception {
+        demoNum = 7;
+        Stage demo = this.demoList.get(demoNum);
+        demo.show();
+    }
+
+    @FXML
+    private void onMenuClick8() throws Exception {
+        demoNum = 8;
+        Stage demo = this.demoList.get(demoNum);
+        demo.show();
+    }
+
+    @FXML
+    private void onMenuClick9() throws Exception {
+        demoNum = 9;
+        Stage demo = this.demoList.get(demoNum);
+        demo.show();
+    }
 }
