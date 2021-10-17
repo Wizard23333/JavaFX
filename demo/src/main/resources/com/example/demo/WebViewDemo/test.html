@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaFX</title>
+
+    <script>
+         function changeBgColor()  {
+           var color= document.getElementById('color').value;
+           document.body.style.backgroundColor= color;
+         }
+    </script>
+</head>
+<body>
+    <h2>This is Html content</h2>
+    <b>Enter Color:</b>
+    <input id='color' value='yellow' />
+    <button onclick='changeBgColor();'>Change Bg Color</button>
+</body>
+</html>

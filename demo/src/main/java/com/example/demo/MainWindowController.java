@@ -1,8 +1,11 @@
 package com.example.demo;
 
+import com.example.demo.ChartDemo.PieChartDemo;
 import com.example.demo.LayoutDemo1.LayoutSampleApplication;
 import com.example.demo.LayoutDemo2.LayoutSizingAligning;
 import com.example.demo.LayoutDemo3.LayoutSampleCSS;
+import com.example.demo.ThreeDModelDemo.ThreeDModelDemo;
+import com.example.demo.WebViewDemo.WebViewDemo;
 import com.example.demo.demo1.Demo1Application;
 import com.example.demo.demo10.Demo10Application;
 import com.example.demo.demo11.Demo11Application;
@@ -72,6 +75,21 @@ public class MainWindowController {
         try {
             add(new Demo12Application());
         } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            add(new WebViewDemo());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            add(new PieChartDemo());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            add(new ThreeDModelDemo());
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }};
