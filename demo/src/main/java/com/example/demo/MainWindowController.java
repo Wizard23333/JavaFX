@@ -11,7 +11,6 @@ import com.example.demo.demo10.Demo10Application;
 import com.example.demo.demo11.Demo11Application;
 import com.example.demo.demo12.Demo12Application;
 import com.example.demo.demo2.Demo2Application;
-import com.example.demo.demo3.Demo3Application;
 import com.example.demo.dragAndDropDemo1.HelloDragAndDrop;
 import com.example.demo.eventFilterDemo.DraggablePanelsExample;
 import javafx.fxml.FXML;
@@ -23,7 +22,7 @@ import java.util.ArrayList;
 
 public class MainWindowController {
     // 演示demo的序号
-    int demoNum = 0;
+    int demoNum = -1;
 
     // 演示demo的列表 每新增加一个demo需要在这里添加
     ArrayList<Stage> demoList = new ArrayList<Stage>() {{
@@ -102,17 +101,34 @@ public class MainWindowController {
     // "下一个演示" 按钮
     @FXML
     private void onNextButtonClick() {
-        Stage demo = this.demoList.get(demoNum++);
-        demo.show();
+        demoNum++;
         demoNum = demoNum >= demoList.size() ? demoNum - demoList.size() : demoNum;
+        Stage demo = this.demoList.get(demoNum);
+        demo.show();
+        closePreStage(-1);
+
     }
 
     // "前一个演示按钮"
     @FXML
     private void onPreButtonClick() {
-        Stage demo = this.demoList.get(demoNum--);
-        demo.show();
+        if(demoNum == -1)
+            demoNum = 0;
+        demoNum--;
         demoNum = demoNum < 0 ? demoNum + demoList.size() : demoNum;
+        Stage demo = this.demoList.get(demoNum);
+        demo.show();
+        closePreStage(1);
+    }
+
+    private void closePreStage(int index) {
+        // 将前一个窗口关闭
+        System.out.println("close");
+        int curDemoNum = demoNum + index;
+        curDemoNum = curDemoNum >= demoList.size() ? curDemoNum - demoList.size() : curDemoNum;
+        curDemoNum = curDemoNum < 0 ? curDemoNum + demoList.size() : curDemoNum;
+        Stage closeStage = this.demoList.get(curDemoNum);
+        closeStage.close();
     }
 
     @FXML
