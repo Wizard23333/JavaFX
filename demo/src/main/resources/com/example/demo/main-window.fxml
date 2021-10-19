@@ -41,9 +41,12 @@
                 <MenuItem mnemonicParsing="false" onAction="#onMenuClick4" text="LayoutDemo3" />
                 <MenuItem mnemonicParsing="false" onAction="#onMenuClick5" text="EventFilterDemo" />
                 <MenuItem mnemonicParsing="false" onAction="#onMenuClick6" text="DragAndDropDemo1" />
-            <MenuItem mnemonicParsing="false" onAction="#onMenuClick7" text="Demo10" />
-            <MenuItem mnemonicParsing="false" onAction="#onMenuClick8" text="Demo11" />
-            <MenuItem mnemonicParsing="false" onAction="#onMenuClick9" text="Demo12" />
+                <MenuItem mnemonicParsing="false" onAction="#onMenuClick7" text="Demo10" />
+                <MenuItem mnemonicParsing="false" onAction="#onMenuClick8" text="Demo11" />
+                <MenuItem mnemonicParsing="false" onAction="#onMenuClick9" text="Demo12" />
+                <MenuItem mnemonicParsing="false" onAction="#onMediaDemo" text="MediaDemo" />
+                <MenuItem mnemonicParsing="false" onAction="#onSceneGraphDemo" text="SceneGraphDemo" />
+                <MenuItem mnemonicParsing="false" onAction="#onTransition" text="TransitionDemo" />
             </items>
         </MenuButton>
     </children>

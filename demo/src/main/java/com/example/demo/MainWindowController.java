@@ -4,7 +4,10 @@ import com.example.demo.ChartDemo.PieChartDemo;
 import com.example.demo.LayoutDemo1.LayoutSampleApplication;
 import com.example.demo.LayoutDemo2.LayoutSizingAligning;
 import com.example.demo.LayoutDemo3.LayoutSampleCSS;
+import com.example.demo.MediaDemo.MeidaDemo;
+import com.example.demo.SceneGraphDemo.SceneGraph;
 import com.example.demo.ThreeDModelDemo.ThreeDModelDemo;
+import com.example.demo.Transition.TransitionDemo;
 import com.example.demo.WebViewDemo.WebViewDemo;
 import com.example.demo.demo1.Demo1Application;
 import com.example.demo.demo10.Demo10Application;
@@ -88,6 +91,21 @@ public class MainWindowController {
         }
         try {
             add(new ThreeDModelDemo());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            add(new MeidaDemo());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            add(new SceneGraph());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            add(new TransitionDemo());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -197,6 +215,24 @@ public class MainWindowController {
     @FXML
     private void onMenuClick9() throws Exception {
         demoNum = 9;
+        Stage demo = this.demoList.get(demoNum);
+        demo.show();
+    }
+    @FXML
+    private void onMediaDemo() throws Exception {
+        demoNum = 13;
+        Stage demo = this.demoList.get(demoNum);
+        demo.show();
+    }
+    @FXML
+    private void onSceneGraphDemo() throws Exception {
+        demoNum = 14;
+        Stage demo = this.demoList.get(demoNum);
+        demo.show();
+    }
+    @FXML
+    private void onTransition() throws Exception {
+        demoNum = 15;
         Stage demo = this.demoList.get(demoNum);
         demo.show();
     }
