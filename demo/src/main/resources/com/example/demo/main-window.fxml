@@ -46,8 +46,10 @@
                 <MenuItem mnemonicParsing="false" onAction="#onMenuClick9" text="Demo12" />
                 <MenuItem mnemonicParsing="false" onAction="#onMediaDemo" text="MediaDemo" />
                 <MenuItem mnemonicParsing="false" onAction="#onSceneGraphDemo" text="SceneGraphDemo" />
-                <MenuItem mnemonicParsing="false" onAction="#onTransition" text="TransitionDemo" />
+                <MenuItem mnemonicParsing="false" onAction="#onTransformation" text="TransformationDemo" />
                 <MenuItem mnemonicParsing="false" onAction="#onEffect" text="EffectDemo" />
+                <MenuItem mnemonicParsing="false" onAction="#onTransition" text="TransitionDemo" />
+                <MenuItem mnemonicParsing="false" onAction="#onAnimation" text="AnimationDemo" />
             </items>
         </MenuButton>
     </children>

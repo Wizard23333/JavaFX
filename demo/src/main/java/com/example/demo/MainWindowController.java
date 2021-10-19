@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.AnimationDemo.AnimationDemo1;
 import com.example.demo.ChartDemo.PieChartDemo;
 import com.example.demo.Effect.EffectDemo;
 import com.example.demo.LayoutDemo1.LayoutSampleApplication;
@@ -8,7 +9,8 @@ import com.example.demo.LayoutDemo3.LayoutSampleCSS;
 import com.example.demo.MediaDemo.MeidaDemo;
 import com.example.demo.SceneGraphDemo.SceneGraph;
 import com.example.demo.ThreeDModelDemo.ThreeDModelDemo;
-import com.example.demo.Transition.TransitionDemo;
+import com.example.demo.TransformationDemo.TransformationDemo;
+import com.example.demo.TransitionDemo.TransitionDemo;
 import com.example.demo.WebViewDemo.WebViewDemo;
 import com.example.demo.demo1.Demo1Application;
 import com.example.demo.demo10.Demo10Application;
@@ -106,7 +108,7 @@ public class MainWindowController {
             e.printStackTrace();
         }
         try {
-            add(new TransitionDemo());
+            add(new TransformationDemo());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -115,6 +117,17 @@ public class MainWindowController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        try {
+            add(new TransitionDemo());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            add(new AnimationDemo1());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }};
 
     @FXML
@@ -237,7 +250,7 @@ public class MainWindowController {
         demo.show();
     }
     @FXML
-    private void onTransition() throws Exception {
+    private void onTransformation() throws Exception {
         demoNum = 15;
         Stage demo = this.demoList.get(demoNum);
         demo.show();
@@ -245,6 +258,18 @@ public class MainWindowController {
     @FXML
     private void onEffect() throws Exception {
         demoNum = 16;
+        Stage demo = this.demoList.get(demoNum);
+        demo.show();
+    }
+    @FXML
+    private void onTransition() throws Exception {
+        demoNum = 17;
+        Stage demo = this.demoList.get(demoNum);
+        demo.show();
+    }
+    @FXML
+    private void onAnimation() throws Exception {
+        demoNum = 18;
         Stage demo = this.demoList.get(demoNum);
         demo.show();
     }
