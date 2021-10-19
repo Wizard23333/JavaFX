@@ -286,4 +286,20 @@ public class MainWindowController {
         Stage demo = this.demoList.get(demoNum);
         demo.show();
     }
+    @FXML
+    private void onChartDemo() throws Exception {
+        demoNum = 11;
+        Stage demo = this.demoList.get(demoNum);
+        demo.show();
+    }@FXML
+    private void onWebViewDemo() throws Exception {
+        demoNum = 10;
+        Stage demo = this.demoList.get(demoNum);
+        demo.show();
+    }@FXML
+    private void onThreeDModelDemo() throws Exception {
+        demoNum = 12;
+        Stage demo = this.demoList.get(demoNum);
+        demo.show();
+    }
 }
