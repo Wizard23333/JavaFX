@@ -53,6 +53,7 @@ public class EffectDemo extends Stage {
         /// DistantLight
         content.add(distantLight());
 
+        content.add(chainEffects());
         //content.add(chainEffects());
         this.setTitle("Effect");
         this.setScene(scene);
@@ -139,7 +140,7 @@ public class EffectDemo extends Stage {
         t.setX(10.0f);
         t.setY(50.0f);
         t.setCache(true);
-        t.setText("Reflections on JavaFX...");
+        t.setText("Reflection");
         t.setFill(Color.RED);
         t.setFont(Font.font("null", FontWeight.BOLD, 30));
 
@@ -181,7 +182,7 @@ public class EffectDemo extends Stage {
         l.setSurfaceScale(5.0f);
 
         Text t = new Text();
-        t.setText("JavaFX\nLighting!");
+        t.setText("Lighting!");
         t.setFill(Color.RED);
         t.setFont(Font.font("null", FontWeight.BOLD, 70));
         t.setX(500.0f);
@@ -314,8 +315,8 @@ public class EffectDemo extends Stage {
         t.setCache(true);
         t.setX(10.0f);
         t.setY(270.0f);
-        t.setFill(Color.RED);
-        t.setText("JavaFX drop shadow...");
+        t.setFill(Color.ORANGE);
+        t.setText("drop shadow");
         t.setFont(Font.font("null", FontWeight.BOLD, 32));
 
         DropShadow ds1 = new DropShadow();
@@ -367,8 +368,8 @@ public class EffectDemo extends Stage {
         rect.setFill(Color.RED);
         rect.setWidth(200);
         rect.setHeight(100);
-        rect.setX(60.0f);
-        rect.setY(60.0f);
+        rect.setX(600.0f);
+        rect.setY(550.0f);
 
         DropShadow ds = new DropShadow();
         ds.setOffsetY(5.0);
