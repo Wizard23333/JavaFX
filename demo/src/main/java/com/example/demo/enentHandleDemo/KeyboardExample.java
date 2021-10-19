@@ -117,7 +117,9 @@ public final class KeyboardExample extends Stage {
             return keyNode;
         }
 
+        // 按键节点keyNode的Event Handler
         private void installEventHandler(final Node keyNode) {
+            // 回车键按下/释放事件的Event Handler，其它键由父节点(keyboard)的Event Handler处理
             // handler for enter key press / release events, other keys are
             // handled by the parent (keyboard) node handler
             final EventHandler<KeyEvent> keyEventHandler =
@@ -157,7 +159,9 @@ public final class KeyboardExample extends Stage {
             return keyboardNode;
         }
 
+        // 键盘节点的Event Handler
         private void installEventHandler(final Parent keyboardNode) {
+            // 没有被keyNode处理掉的按键按下/释放事件的Event
             // handler for key pressed / released events not handled by
             // key nodes
             final EventHandler<KeyEvent> keyEventHandler =
