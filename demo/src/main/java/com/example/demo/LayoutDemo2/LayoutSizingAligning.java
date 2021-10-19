@@ -63,25 +63,6 @@ public class LayoutSizingAligning extends Stage {
     private final Button btnContinue = new Button("Continue");
     private final Button btnExit = new Button("Exit");
 
-
-    public void start(Stage primaryStage) {
-        // Make Exit button bigger by using larger font for label
-        btnExit.setStyle("-fx-font-size: 15pt;");
-        // Use tab pane with one tab for sizing UI and one tab for alignment UI
-        TabPane tabs = new TabPane();
-        Tab tabSize = new Tab();
-        tabSize.setText("Sizing");
-        tabSize.setContent(sizingSample());
-        Tab tabAlign = new Tab();
-        tabAlign.setText("Alignment");
-        tabAlign.setContent(alignmentSample());
-        tabs.getTabs().addAll(tabSize, tabAlign);
-        Scene scene = new Scene(tabs, 300, 400); // Manage scene size
-        primaryStage.setTitle("Sizing and Aligning");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
-
     public LayoutSizingAligning() {
         // Make Exit button bigger by using larger font for label
         btnExit.setStyle("-fx-font-size: 15pt;");
