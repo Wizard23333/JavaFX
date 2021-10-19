@@ -18,6 +18,7 @@ import com.example.demo.demo11.Demo11Application;
 import com.example.demo.demo12.Demo12Application;
 import com.example.demo.demo2.Demo2Application;
 import com.example.demo.dragAndDropDemo1.HelloDragAndDrop;
+import com.example.demo.enentHandleDemo.KeyboardExample;
 import com.example.demo.eventFilterDemo.DraggablePanelsExample;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -111,6 +112,8 @@ public class MainWindowController {
             add(new TransformationDemo());
         } catch (Exception e) {
             e.printStackTrace();
+            // 避免构造失败时对后续项造成影响
+            add (new Stage());
         }
         try {
             add(new EffectDemo());
@@ -127,7 +130,11 @@ public class MainWindowController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        try {
+            add(new KeyboardExample());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }};
 
     @FXML
@@ -270,6 +277,12 @@ public class MainWindowController {
     @FXML
     private void onAnimation() throws Exception {
         demoNum = 18;
+        Stage demo = this.demoList.get(demoNum);
+        demo.show();
+    }
+    @FXML
+    private void onEventHandleDemo() throws Exception {
+        demoNum = 19;
         Stage demo = this.demoList.get(demoNum);
         demo.show();
     }

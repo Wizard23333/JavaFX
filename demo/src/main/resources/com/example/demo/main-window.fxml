@@ -40,6 +40,7 @@
                 <MenuItem mnemonicParsing="false" onAction="#onMenuClick3" text="LayoutDemo2" />
                 <MenuItem mnemonicParsing="false" onAction="#onMenuClick4" text="LayoutDemo3" />
                 <MenuItem mnemonicParsing="false" onAction="#onMenuClick5" text="EventFilterDemo" />
+            <MenuItem mnemonicParsing="false" onAction="#onEventHandleDemo" text="EventHandleDemo" />
                 <MenuItem mnemonicParsing="false" onAction="#onMenuClick6" text="DragAndDropDemo1" />
                 <MenuItem mnemonicParsing="false" onAction="#onMenuClick7" text="Demo10" />
                 <MenuItem mnemonicParsing="false" onAction="#onMenuClick8" text="Demo11" />
