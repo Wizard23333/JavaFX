@@ -102,7 +102,6 @@ public class LayoutSampleApplication extends Stage {
     /*
      * Creates an HBox with two buttons for the top region，上方的导航栏
      */
-
     private HBox addHBox() {
 
         HBox hbox = new HBox();
@@ -228,7 +227,7 @@ public class LayoutSampleApplication extends Stage {
         GridPane.setValignment(servicesPercent, VPos.TOP);
         grid.add(servicesPercent, 3, 2);
 
-//        grid.setGridLinesVisible(true);
+        //grid.setGridLinesVisible(true);//使网格可见
         return grid;
     }
 
