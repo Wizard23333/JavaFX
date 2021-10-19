@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.example.demo.ChartDemo.PieChartDemo;
+import com.example.demo.Effect.EffectDemo;
 import com.example.demo.LayoutDemo1.LayoutSampleApplication;
 import com.example.demo.LayoutDemo2.LayoutSizingAligning;
 import com.example.demo.LayoutDemo3.LayoutSampleCSS;
@@ -106,6 +107,11 @@ public class MainWindowController {
         }
         try {
             add(new TransitionDemo());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            add(new EffectDemo());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -233,6 +239,12 @@ public class MainWindowController {
     @FXML
     private void onTransition() throws Exception {
         demoNum = 15;
+        Stage demo = this.demoList.get(demoNum);
+        demo.show();
+    }
+    @FXML
+    private void onEffect() throws Exception {
+        demoNum = 16;
         Stage demo = this.demoList.get(demoNum);
         demo.show();
     }
