@@ -1,5 +1,6 @@
 package com.example.demo.TransformationDemo;
 
+import com.example.demo.MainWindowApplication;
 import javafx.event.EventHandler;
 import javafx.geometry.Bounds;
 import javafx.scene.DepthTest;
@@ -64,21 +65,21 @@ public class TransformationDemo extends Stage {
         scene.setCamera(new PerspectiveCamera());
 
         final AudioClip bar1Note =
-                new AudioClip(TransformationDemo.class.getResource("audio/Note1.wav").toString());
+                new AudioClip(MainWindowApplication.class.getResource("audio/Note1.wav").toString());
         final AudioClip bar2Note =
-                new AudioClip(TransformationDemo.class.getResource("audio/Note2.wav").toString());
+                new AudioClip(MainWindowApplication.class.getResource("audio/Note2.wav").toString());
         final AudioClip bar3Note =
-                new AudioClip(TransformationDemo.class.getResource("audio/Note3.wav").toString());
+                new AudioClip(MainWindowApplication.class.getResource("audio/Note3.wav").toString());
         final AudioClip bar4Note =
-                new AudioClip(TransformationDemo.class.getResource("audio/Note4.wav").toString());
+                new AudioClip(MainWindowApplication.class.getResource("audio/Note4.wav").toString());
         final AudioClip bar5Note =
-                new AudioClip(TransformationDemo.class.getResource("audio/Note5.wav").toString());
+                new AudioClip(MainWindowApplication.class.getResource("audio/Note5.wav").toString());
         final AudioClip bar6Note =
-                new AudioClip(TransformationDemo.class.getResource("audio/Note6.wav").toString());
+                new AudioClip(MainWindowApplication.class.getResource("audio/Note6.wav").toString());
         final AudioClip bar7Note =
-                new AudioClip(TransformationDemo.class.getResource("audio/Note7.wav").toString());
+                new AudioClip(MainWindowApplication.class.getResource("audio/Note7.wav").toString());
         final AudioClip bar8Note =
-                new AudioClip(TransformationDemo.class.getResource("audio/Note8.wav").toString());
+                new AudioClip(MainWindowApplication.class.getResource("audio/Note8.wav").toString());
 
         Group rectangleGroup = new Group();
         rectangleGroup.getTransforms().add(shear);
