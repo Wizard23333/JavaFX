@@ -20,10 +20,11 @@ public class Demo1Application extends Stage {
         label1.setFont(new Font("Arial", 30));
         label1.setTextFill(Color.web("#0076a3"));
 
+
         // 在这里修改每个演示的内容
         // 添加各种的功能演示
 
         //scene.
-        this.setScene(scene);
+        this.setScene(new Scene(label1));
     }
 }
