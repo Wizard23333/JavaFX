@@ -60,7 +60,7 @@ public class TransformationDemo extends Stage {
         final Scene scene = new Scene(camOffset, 800, 600, true);
         scene.setFill(new RadialGradient(225, 0.85, 300, 300, 500, false,
                 CycleMethod.NO_CYCLE, new Stop[]
-                { new Stop(0f, Color.BLUE),
+                { new Stop(0f, Color.WHITESMOKE),
                         new Stop(1f, Color.LIGHTBLUE) }));
         scene.setCamera(new PerspectiveCamera());
 
@@ -464,7 +464,6 @@ public class TransformationDemo extends Stage {
             frontFace.setTranslateZ(-0.5*size);
 
             getChildren().addAll(backFace, bottomFace, rightFace, leftFace, topFace,frontFace);
-
         }
     }
 }

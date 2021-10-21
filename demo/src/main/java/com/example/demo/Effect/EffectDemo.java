@@ -8,7 +8,7 @@ import javafx.geometry.VPos;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.effect.*;
+import javafx.scene.effect.*;//all effects
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Box;
 import javafx.scene.shape.Circle;
@@ -57,6 +57,171 @@ public class EffectDemo extends Stage {
         //content.add(chainEffects());
         this.setTitle("Effect");
         this.setScene(scene);
+    }
+    static Node blendMode() {
+
+        Rectangle r = new Rectangle();
+        r.setX(590);
+        r.setY(50);
+        r.setWidth(50);
+        r.setHeight(50);
+        r.setFill(Color.BLUE);
+
+        Circle c = new Circle();
+        c.setFill(Color.RED);
+        c.setCenterX(590);
+        c.setCenterY(50);
+        c.setRadius(25);
+        c.setBlendMode(BlendMode.SRC_ATOP);
+
+        Group g = new Group();
+        g.setBlendMode(BlendMode.SRC_OVER);
+        g.getChildren().add(r);
+        g.getChildren().add(c);
+        return g;
+    }
+    static Node bloom() {
+        Group g = new Group();
+
+        Rectangle r = new Rectangle();
+        r.setX(10);
+        r.setY(10);
+        r.setWidth(160);
+        r.setHeight(80);
+        r.setFill(Color.DARKBLUE);
+
+        Text t = new Text();
+        t.setText("Bloom!");
+        t.setFill(Color.YELLOW);
+        t.setFont(Font.font("null", FontWeight.BOLD, 36));
+        t.setX(25);
+        t.setY(65);
+
+        g.setCache(true);
+        Bloom bloom = new Bloom();
+        bloom.setThreshold(0.3);
+        g.setEffect(bloom);
+        g.getChildren().add(r);
+        g.getChildren().add(t);
+        g.setTranslateX(350);
+        return g;
+    }
+    static Node motionBlur() {
+        Text t = new Text();
+        t.setX(20.0f);
+        t.setY(80.0f);
+        t.setText("Motion Blur");
+        t.setFill(Color.RED);
+        t.setFont(Font.font("null", FontWeight.BOLD, 60));
+
+        MotionBlur mb = new MotionBlur();
+        mb.setRadius(15.0f);
+        mb.setAngle(45.0f);
+
+        t.setEffect(mb);
+
+        t.setTranslateX(520);
+        t.setTranslateY(100);
+
+        return t;
+    }
+    static Node gaussianBlur() {
+        Text t2 = new Text();
+        t2.setX(10.0f);
+        t2.setY(140.0f);
+        t2.setCache(true);
+        t2.setText("Gaussian Blur");
+        t2.setFill(Color.RED);
+        t2.setFont(Font.font("null", FontWeight.BOLD, 36));
+        t2.setEffect(new GaussianBlur());
+        return t2;
+    }
+    static Node innerShadow() {
+        InnerShadow is = new InnerShadow();
+        is.setOffsetX(2.0f);
+        is.setOffsetY(2.0f);
+
+        Text t = new Text();
+        t.setEffect(is);
+        t.setX(20);
+        t.setY(100);
+        t.setText("Inner Shadow");
+        t.setFill(Color.RED);
+        t.setFont(Font.font("null", FontWeight.BOLD, 80));
+
+        t.setTranslateX(300);
+        t.setTranslateY(300);
+
+        return t;
+    }
+    static Node dropShadow() {
+        Group g = new Group();
+        DropShadow ds = new DropShadow();
+        ds.setOffsetY(3.0f);
+        ds.setColor(Color.color(0.4f, 0.4f, 0.4f));
+
+        Text t = new Text();
+        t.setEffect(ds);
+        t.setCache(true);
+        t.setX(10.0f);
+        t.setY(270.0f);
+        t.setFill(Color.ORANGE);
+        t.setText("drop shadow");
+        t.setFont(Font.font("null", FontWeight.BOLD, 32));
+
+        DropShadow ds1 = new DropShadow();
+        ds1.setOffsetY(4.0f);
+
+        Circle c = new Circle();
+        c.setEffect(ds1);
+        c.setCenterX(50.0f);
+        c.setCenterY(325.0f);
+        c.setRadius(30.0f);
+        c.setFill(Color.ORANGE);
+        c.setCache(true);
+
+        g.getChildren().add(t);
+        g.getChildren().add(c);
+        return g;
+    }
+    static Node reflection() {
+        Text t = new Text();
+        t.setX(10.0f);
+        t.setY(50.0f);
+        t.setCache(true);
+        t.setText("Reflection");
+        t.setFill(Color.RED);
+        t.setFont(Font.font("null", FontWeight.BOLD, 30));
+
+        Reflection r = new Reflection();
+        r.setFraction(0.7f);
+
+        t.setEffect(r);
+
+        t.setTranslateY(400);
+        return t;
+    }
+    static Node chainEffects() {
+
+        Rectangle rect = new Rectangle();
+        rect.setFill(Color.RED);
+        rect.setWidth(200);
+        rect.setHeight(100);
+        rect.setX(600.0f);
+        rect.setY(550.0f);
+
+        DropShadow ds = new DropShadow();
+        ds.setOffsetY(5.0);
+        ds.setOffsetX(5.0);
+        ds.setColor(Color.GRAY);
+
+
+        Reflection reflection = new Reflection();
+
+        ds.setInput(reflection);
+        rect.setEffect(ds);
+
+        return rect;
     }
     static Node distantLight() {
         Light.Distant light = new Light.Distant();
@@ -123,55 +288,6 @@ public class EffectDemo extends Stage {
         return g;
     }
 
-    static Node gaussianBlur() {
-        Text t2 = new Text();
-        t2.setX(10.0f);
-        t2.setY(140.0f);
-        t2.setCache(true);
-        t2.setText("Gaussian Blur");
-        t2.setFill(Color.RED);
-        t2.setFont(Font.font("null", FontWeight.BOLD, 36));
-        t2.setEffect(new GaussianBlur());
-        return t2;
-    }
-
-    static Node reflection() {
-        Text t = new Text();
-        t.setX(10.0f);
-        t.setY(50.0f);
-        t.setCache(true);
-        t.setText("Reflection");
-        t.setFill(Color.RED);
-        t.setFont(Font.font("null", FontWeight.BOLD, 30));
-
-        Reflection r = new Reflection();
-        r.setFraction(0.7f);
-
-        t.setEffect(r);
-
-        t.setTranslateY(400);
-        return t;
-    }
-
-    static Node motionBlur() {
-        Text t = new Text();
-        t.setX(20.0f);
-        t.setY(80.0f);
-        t.setText("Motion Blur");
-        t.setFill(Color.RED);
-        t.setFont(Font.font("null", FontWeight.BOLD, 60));
-
-        MotionBlur mb = new MotionBlur();
-        mb.setRadius(15.0f);
-        mb.setAngle(45.0f);
-
-        t.setEffect(mb);
-
-        t.setTranslateX(520);
-        t.setTranslateY(100);
-
-        return t;
-    }
 
     static Node lighting() {
         Light.Distant light = new Light.Distant();
@@ -193,25 +309,6 @@ public class EffectDemo extends Stage {
 
         t.setTranslateX(0);
         t.setTranslateY(320);
-
-        return t;
-    }
-
-    static Node innerShadow() {
-        InnerShadow is = new InnerShadow();
-        is.setOffsetX(2.0f);
-        is.setOffsetY(2.0f);
-
-        Text t = new Text();
-        t.setEffect(is);
-        t.setX(20);
-        t.setY(100);
-        t.setText("Inner Shadow");
-        t.setFill(Color.RED);
-        t.setFont(Font.font("null", FontWeight.BOLD, 80));
-
-        t.setTranslateX(300);
-        t.setTranslateY(300);
 
         return t;
     }
@@ -279,109 +376,5 @@ public class EffectDemo extends Stage {
         t.setTranslateY(100);
 
         return t;
-    }
-
-    static Node blendMode() {
-
-        Rectangle r = new Rectangle();
-        r.setX(590);
-        r.setY(50);
-        r.setWidth(50);
-        r.setHeight(50);
-        r.setFill(Color.BLUE);
-
-        Circle c = new Circle();
-        c.setFill(Color.RED);
-        c.setCenterX(590);
-        c.setCenterY(50);
-        c.setRadius(25);
-        c.setBlendMode(BlendMode.SRC_ATOP);
-
-        Group g = new Group();
-        g.setBlendMode(BlendMode.SRC_OVER);
-        g.getChildren().add(r);
-        g.getChildren().add(c);
-        return g;
-    }
-
-    static Node dropShadow() {
-        Group g = new Group();
-        DropShadow ds = new DropShadow();
-        ds.setOffsetY(3.0f);
-        ds.setColor(Color.color(0.4f, 0.4f, 0.4f));
-
-        Text t = new Text();
-        t.setEffect(ds);
-        t.setCache(true);
-        t.setX(10.0f);
-        t.setY(270.0f);
-        t.setFill(Color.ORANGE);
-        t.setText("drop shadow");
-        t.setFont(Font.font("null", FontWeight.BOLD, 32));
-
-        DropShadow ds1 = new DropShadow();
-        ds1.setOffsetY(4.0f);
-
-        Circle c = new Circle();
-        c.setEffect(ds1);
-        c.setCenterX(50.0f);
-        c.setCenterY(325.0f);
-        c.setRadius(30.0f);
-        c.setFill(Color.ORANGE);
-        c.setCache(true);
-
-        g.getChildren().add(t);
-        g.getChildren().add(c);
-        return g;
-    }
-
-    static Node bloom() {
-        Group g = new Group();
-
-        Rectangle r = new Rectangle();
-        r.setX(10);
-        r.setY(10);
-        r.setWidth(160);
-        r.setHeight(80);
-        r.setFill(Color.DARKBLUE);
-
-        Text t = new Text();
-        t.setText("Bloom!");
-        t.setFill(Color.YELLOW);
-        t.setFont(Font.font("null", FontWeight.BOLD, 36));
-        t.setX(25);
-        t.setY(65);
-
-        g.setCache(true);
-        //g.setEffect(new Bloom());
-        Bloom bloom = new Bloom();
-        bloom.setThreshold(1.0);
-        g.setEffect(bloom);
-        g.getChildren().add(r);
-        g.getChildren().add(t);
-        g.setTranslateX(350);
-        return g;
-    }
-    static Node chainEffects() {
-
-        Rectangle rect = new Rectangle();
-        rect.setFill(Color.RED);
-        rect.setWidth(200);
-        rect.setHeight(100);
-        rect.setX(600.0f);
-        rect.setY(550.0f);
-
-        DropShadow ds = new DropShadow();
-        ds.setOffsetY(5.0);
-        ds.setOffsetX(5.0);
-        ds.setColor(Color.GRAY);
-
-
-        Reflection reflection = new Reflection();
-
-        ds.setInput(reflection);
-        rect.setEffect(ds);
-
-        return rect;
     }
 }

@@ -59,7 +59,7 @@ public class MeidaDemo extends Stage {
         pane.setBottom(hBox);
         pane.setCenter(mediaView);
 
-        Scene scene = new Scene(pane,1000,600);
+        Scene scene = new Scene(pane,800,500);
         this.setTitle("VideoPlayer");
         this.setScene(scene);
 

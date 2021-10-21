@@ -13,7 +13,7 @@ import java.io.IOException;
 public class SceneGraph extends Stage {
     public SceneGraph() throws IOException{
         Group root = new Group();
-        Scene scene = new Scene(root, 500, 500, Color.BLACK);
+        Scene scene = new Scene(root, 500, 500, Color.GREENYELLOW);
         Rectangle r = new Rectangle(0, 0, 250, 250);
         r.setFill(Color.BLUE);
         root.getChildren().add(r);
