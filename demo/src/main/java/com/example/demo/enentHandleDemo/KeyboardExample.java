@@ -88,6 +88,7 @@ public final class KeyboardExample extends Stage {
             return pressedProperty.get();
         }
 
+        // 用于WASD按下时的处理
         public void setPressed(final boolean value) {
             pressedProperty.set(value);
         }
@@ -99,7 +100,7 @@ public final class KeyboardExample extends Stage {
 
             final Rectangle keyBackground = new Rectangle(50, 50);
             keyBackground.fillProperty().bind(
-                    Bindings.when(pressedProperty)
+                    Bindings.when(pressedProperty) // WASD按下的处理
                             .then(Color.RED)
                             .otherwise(Bindings.when(keyNode.focusedProperty())
                                                .then(Color.LIGHTGRAY)
@@ -117,7 +118,7 @@ public final class KeyboardExample extends Stage {
             return keyNode;
         }
 
-        // 按键节点keyNode的Event Handler
+        // 按键节点keyNode的Event Handler（回车键）
         private void installEventHandler(final Node keyNode) {
             // 回车键按下/释放事件的Event Handler，其它键由父节点(keyboard)的Event Handler处理
             // handler for enter key press / release events, other keys are
@@ -127,7 +128,7 @@ public final class KeyboardExample extends Stage {
                         public void handle(final KeyEvent keyEvent) {
                             if (keyEvent.getCode() == KeyCode.ENTER) {
                                 setPressed(keyEvent.getEventType()
-                                               == KeyEvent.KEY_PRESSED);
+                                               == KeyEvent.KEY_PRESSED);//WASD按下时起作用
 
                                 keyEvent.consume();
                             }
@@ -180,6 +181,7 @@ public final class KeyboardExample extends Stage {
             keyboardNode.setOnKeyPressed(keyEventHandler);
             keyboardNode.setOnKeyReleased(keyEventHandler);
 
+            // 左右箭头键handler添加
             keyboardNode.addEventHandler(KeyEvent.KEY_PRESSED,
                                          new EventHandler<KeyEvent>() {
                                              public void handle(

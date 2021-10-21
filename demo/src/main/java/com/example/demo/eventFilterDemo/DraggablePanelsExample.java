@@ -81,6 +81,7 @@ public final class DraggablePanelsExample extends Stage {
                     @Override
                     public void handle(final MouseEvent mouseEvent) {
                         if (dragModeActiveProperty.get()) {
+                            // 为所有的子节点禁用鼠标事件
                             // disable mouse events for all children
                             mouseEvent.consume();
                         }
@@ -93,6 +94,7 @@ public final class DraggablePanelsExample extends Stage {
                     @Override
                     public void handle(final MouseEvent mouseEvent) {
                         if (dragModeActiveProperty.get()) {
+                            // 记住鼠标光标的初始坐标和node位置
                             // remember initial mouse cursor coordinates
                             // and node position
                             dragContext.mouseAnchorX = mouseEvent.getX();
@@ -111,6 +113,7 @@ public final class DraggablePanelsExample extends Stage {
                     @Override
                     public void handle(final MouseEvent mouseEvent) {
                         if (dragModeActiveProperty.get()) {
+                            // 通过增量计算鼠标光标动作来从初始位置移动node
                             // shift node from its initial position by delta
                             // calculated from mouse cursor movement
                             node.setTranslateX(
